@@ -1,0 +1,112 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+h4{
+  font-size: 18px;
+  padding: 20px 150px;
+  display: table;
+  background: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+body{
+  background-color: #b6b6b6;
+  color: white;
+}
+h1{
+  text-align: center;
+  margin-top: 200px;
+}
+h2{
+  font-size: 17px;
+  text-align: center;
+  margin-top: 50px;
+  font-weight: normal;
+}
+#contenedor{
+  width: 1000px;
+  height: 667px;
+  background-size: contain;
+  position: relative;
+  top: 0;
+  margin: auto;
+  margin-top: 20px;
+  cursor: crosshair;
+  background-image: url("imagenfondo.jpg");
+}
+img {
+  width: 1000px;
+  height: 667px;
+  position: absolute;
+  top: 0;
+}
+.clip-circle {
+  clip-path: url("#myCircle");
+}
+clipPath circle{
+  transition: transform 1s;
+  transform-origin: center;
+  transform: scale(0);
+}
+@keyframes bounceIn {
+  from,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.33);
+    transform: scale(0.33);
+  }
+  20% {
+    -webkit-transform: scale(1.11);
+    transform: scale(1.11);
+  }
+  40% {
+    -webkit-transform: scale(0.99);
+    transform: scale(0.99);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+  80% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1.8 );
+    transform: scale(1.8 );
+  }
+}
+@keyframes bounceOut {
+  20% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+  50%,
+  55% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(0.5, 0.5, 0.5);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(1, 1, 1);
+  }
+}
+.bounceOut {
+  animation-duration: 0.75s;
+  animation-name: bounceOut;
+}
